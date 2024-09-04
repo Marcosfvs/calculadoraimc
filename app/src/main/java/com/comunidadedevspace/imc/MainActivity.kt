@@ -3,6 +3,7 @@ package com.comunidadedevspace.imc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +18,27 @@ class MainActivity : AppCompatActivity() {
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
         btnCalcular.setOnClickListener {
-            val peso:Float = edtPeso.text.toString().toFloat()
-            val altura:Float = edtAltura.text.toString().toFloat()
-            val altura2 = altura * altura
-            val imc = peso / altura2
-            println("Ação do botão " + imc)
+
+
+            val pesoStr: String = edtPeso.text.toString()
+            val alturaStr: String = edtAltura.text.toString()
+            //.isNotEmpty é usado para checar se a string está vazia, pode usar: == "" como no JS
+            if (pesoStr == "" || alturaStr == "") {
+                Snackbar
+                    .make(
+                        edtPeso,
+                        "Preencha todos os campos",
+                        Snackbar.LENGTH_LONG
+                )
+                    .show()
+            } else {
+                val peso: Float = pesoStr.toFloat()
+                val altura: Float = alturaStr.toFloat()
+
+                val altura2 = altura * altura
+                val imc = peso / altura2
+                println("Ação do botão " + imc)
+            }
         }
     }
 }
