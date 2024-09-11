@@ -27,19 +27,7 @@ class ResultActivity : AppCompatActivity() {
 
         tvResult.text = result_imc.toString()
 
-        /*var result_classificacao: String = ""
-        if (result_imc <= 18.5f) {
-            result_classificacao = "MAGREZA"
-        } else if (18.5f < result_imc && result_imc <= 24.9f) {
-            result_classificacao = "NORMAL"
-        } else if (24.9f < result_imc && result_imc <= 29.9f) {
-            result_classificacao = "OBESIDADE I"
-        } else if (29.9f < result_imc && result_imc < 39.9f) {
-            result_classificacao = "OBESIDADE II"
-        } else {
-            result_classificacao = "OBESIDADE GRAVE"
-        }*/
-    var result_classificacao =""
+        var result_classificacao = ""
 
         when {
             result_imc <= 18.5f -> {
