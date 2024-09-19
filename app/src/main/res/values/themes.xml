@@ -7,5 +7,5 @@
 
     </style>
 
-    <style name="Theme.Calculadoraimc" parent="Base.Theme.Calculadoraimc" />
+        <style name="Theme.Calculadoraimc" parent="Base.Theme.Calculadoraimc" />
 </resources>

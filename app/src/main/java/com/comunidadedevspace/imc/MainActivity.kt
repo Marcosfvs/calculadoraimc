@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         // setContentView conecta o xml com o mainactivity
 
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
